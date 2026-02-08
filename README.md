@@ -125,8 +125,24 @@ cp .env.example .env
 # Edit .env with your API keys
 
 # Run
-uvicorn src.api.main:app --reload
+python main.py
+# Or: uvicorn src.api.app:app --reload
 ```
+
+---
+
+## API Endpoints
+
+| Endpoint | Method | Description |
+|----------|--------|-------------|
+| `/api/v1/research` | POST | Full multi-agent research workflow |
+| `/api/v1/research/quick` | POST | Quick research (fewer iterations) |
+| `/api/v1/search` | POST | Semantic search over indexed documents |
+| `/api/v1/documents` | POST | Upload document for indexing |
+| `/api/v1/agents` | GET | List available agents |
+| `/api/v1/agents/run` | POST | Run a specific agent |
+| `/api/v1/costs` | GET | Get cost tracking report |
+| `/health` | GET | Health check |
 
 ---
 
